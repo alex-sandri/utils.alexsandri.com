@@ -1,0 +1,15 @@
+#textarea-stats {
+  > p {
+    > span:first-child {
+      display: block;
+
+      font-size: small;
+      font-weight: 900;
+    }
+
+    > span:last-child {
+      font-size: large;
+      font-weight: 200;
+    }
+  }
+}
