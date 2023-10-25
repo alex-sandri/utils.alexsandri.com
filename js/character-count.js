@@ -22,6 +22,7 @@
 
     textarea.addEventListener('keyup', countCharacters);
     textarea.addEventListener('keydown', countCharacters);
+    textarea.addEventListener('change', countCharacters);
   }
 
   const container = document.getElementById('prog');
