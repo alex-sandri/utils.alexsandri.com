@@ -1,3 +1,5 @@
+const config = { version: 1 };
+
 const elements = document.querySelectorAll('[data-src]');
 
 for (const element of elements) {
@@ -28,7 +30,7 @@ const cleanup = () => {
 
 const loadScript = (src) => {
   const script = document.createElement('script');
-  script.src = `./js/${src}.js`;
+  script.src = `./js/${src}.js?v=${config.version}`;
   script.setAttribute('data-prog', '');
 
   document.body.appendChild(script);
@@ -37,7 +39,7 @@ const loadScript = (src) => {
 const loadStyleSheet = (src) => {
   const link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = `./css/${src}.css`;
+  link.href = `./css/${src}.css?v=${config.version}`;
   link.setAttribute('data-prog', '');
 
   document.head.appendChild(link);
