@@ -5,6 +5,10 @@
   --bg-color: darkgreen;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--color);
   background-color: var(--bg-color);
@@ -15,7 +19,11 @@ body {
 }
 
 header {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+
+  > h1 {
+    margin: 0;
+  }
 }
 
 footer {
@@ -35,8 +43,6 @@ button {
   cursor: pointer;
 
   &:not(header a):not(footer a) {
-    display: inline-block;
-
     color: var(--bg-color);
     background-color: var(--color);
 
@@ -48,6 +54,22 @@ button {
   }
 
   &:hover {
-    opacity: 0.6;
+    opacity: 0.8;
   }
+
+  &.selected {
+    font-weight: 700;
+  }
+}
+
+nav:has(.selected) > :not(.selected) {
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+#prog {
+  margin-top: 2rem;
 }

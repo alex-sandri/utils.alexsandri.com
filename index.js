@@ -6,7 +6,10 @@ for (const element of elements) {
 
     cleanup();
     loadScript(prog);
-    loadStyleSheet(prog)
+    loadStyleSheet(prog);
+
+    document.querySelector('[data-src].selected')?.classList.remove('selected');
+    element.classList.add('selected');
   });
 }
 
