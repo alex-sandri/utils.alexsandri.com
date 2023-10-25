@@ -1,4 +1,4 @@
-const config = { version: 1 };
+const config = { version: 2 };
 
 const elements = document.querySelectorAll('[data-src]');
 
