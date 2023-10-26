@@ -17,8 +17,8 @@
     // TODO: add input for max line length
     const maxLineLength = 80;
 
-    // TODO: for now this is good enough
-    const words = input.split(' ');
+    // TODO: preserve original newlines
+    const words = input.split(/\s/);
 
     for (let i = 0; i < words.length; i++) {
       const currentWord = words[i];
